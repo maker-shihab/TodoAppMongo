@@ -28,9 +28,30 @@ const logger = createLogger({
       datePattern: "YYYY-DD-MM-HH",
       zippedArchive: true,
       maxSize: "20m",
+      maxFiles: "1d",
+    }),
+  ],
+});
+
+const errorlogger = createLogger({
+  level: "error",
+  format: combine(label({ label: "PH" }), timestamp(), logFormat),
+  transports: [
+    new transports.Console(),
+    new DailyRotateFile({
+      filename: path.join(
+        process.cwd(),
+        "logs",
+        "winston",
+        "errors",
+        "phu-%DATE%-error.log"
+      ),
+      datePattern: "YYYY-DD-MM-HH",
+      zippedArchive: true,
+      maxSize: "20m",
       maxFiles: "14d",
     }),
   ],
 });
 
-export default logger;
+export { errorlogger, logger };

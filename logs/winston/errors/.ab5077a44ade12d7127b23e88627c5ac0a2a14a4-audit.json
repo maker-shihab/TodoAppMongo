@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Next Level Development\\TodoAppExpressMongo\\logs\\winston\\errors\\.ab5077a44ade12d7127b23e88627c5ac0a2a14a4-audit.json",
+    "files": [
+        {
+            "date": 1692331783143,
+            "name": "D:\\Next Level Development\\TodoAppExpressMongo\\logs\\winston\\errors\\phu-2023-18-08-10-error.log",
+            "hash": "4f51ec998a9774263eb65c569f00ffe3e8d4cb22d17098f16d1e44fd44e03355"
+        }
+    ],
+    "hashType": "sha256"
+}
